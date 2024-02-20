@@ -1,10 +1,15 @@
 package model;
 
 import jakarta.persistence.*;
-import lombok.*;
-@Entity
-@Table(name="user")
-@Data
-public class User {
 
+import lombok.*;
+import org.springframework.stereotype.Repository;
+
+
+@Entity
+@Data @AllArgsConstructor @NoArgsConstructor
+@Table(name="user")
+public class User {
+    private long id;
 }
+
