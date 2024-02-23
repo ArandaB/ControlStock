@@ -1,10 +1,11 @@
-package repository;
+package com.example.ControlStock.repository;
 
 import org.springframework.stereotype.Repository;
-import jakarta.persistence.*;
+import jakarta.transaction.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Repository
+@Transactional
 public class UserRepository {
 
 

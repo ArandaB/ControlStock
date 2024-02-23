@@ -1,9 +1,7 @@
-package model;
+package com.example.ControlStock.model;
 
 import jakarta.persistence.*;
-
 import lombok.*;
-import org.springframework.stereotype.Repository;
 
 
 @Entity
