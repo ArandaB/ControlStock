@@ -25,6 +25,8 @@ public class User {
     @Column(name="password")
     private String password;
 
-
+    @ManyToOne(fetch = FetchType.EAGER)  //Esto debido a la relacion uno a muchos entre un Store y sus Customers.
+    @JoinColumn(name = "id_store", referencedColumnName = "id")
+    private Store store;
 }
 
