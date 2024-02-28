@@ -8,21 +8,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 @Service
-public class ProductService implements ProductInterface{ //Logica de negocio, validaciones
+public class ProductService implements CRUDinterface{ //Logica de negocio, validaciones
 
     @Autowired
     private ProductRepository repository;
+    @Override
+    public void agregar(Object entidad) {
 
-    public void eliminar(Long id) {
     }
 
-    public void modificar(Product propiedad) {
+    @Override
+    public void modificar(Object entidad) {
+
     }
 
-    public void agregar(Product propiedad) {
+    @Override
+    public void eliminar(Object id) {
+
     }
 
-    public Product get(Long id) {
+    @Override
+    public Product get(Object id) {
         return null;
     }
 

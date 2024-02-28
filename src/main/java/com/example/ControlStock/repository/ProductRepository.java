@@ -1,17 +1,20 @@
 package com.example.ControlStock.repository;
 
 import com.example.ControlStock.model.Product;
-import com.example.ControlStock.service.ProductInterface;
+import com.example.ControlStock.service.CRUDinterface;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public class ProductRepository implements ProductInterface {  //Consultad a la BDD
+@Transactional
+public class ProductRepository implements CRUDinterface<Product,Long> {  //Consultad a la BDD
     @PersistenceContext
     EntityManager conexion;
+
     @Override
     public void agregar(Product product) {
 
