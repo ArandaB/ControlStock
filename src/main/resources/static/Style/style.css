@@ -1,0 +1,39 @@
+/* Estilos para el header */
+.divHeader {
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espacio interior */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: space-between; /* Distribuir elementos horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Estilos para el nombre del encabezado */
+.nameHeader {
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+.nameHeader h2 {
+    margin: 0; /* Eliminar margen predeterminado */
+}
+
+/* Estilos para la lista de navegación */
+.ulHeader {
+    list-style-type: none; /* Quitar viñetas */
+    margin: 0; /* Eliminar margen predeterminado */
+    padding: 0; /* Eliminar relleno predeterminado */
+}
+
+.ulHeader li {
+    display: inline-block; /* Mostrar elementos en línea */
+    margin-left: 10px; /* Espacio entre elementos */
+}
+
+.ulHeader li:first-child {
+    margin-left: 0; /* No hay margen izquierdo para el primer elemento */
+}
+
+.ulHeader li a {
+    color: white; /* Color del texto del enlace */
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
