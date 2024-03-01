@@ -11,34 +11,35 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class ProductRepository implements CRUDinterface<Product,Long> {  //Consultad a la BDD
+public class ProductRepository {  //Consultad a la BDD
     @PersistenceContext
     EntityManager conexion;
 
-    @Override
     public void agregar(Product product) {
 
     }
 
-    @Override
+
     public void modificar(Product product) {
 
     }
 
-    @Override
+
     public void eliminar(Long id) {
 
     }
 
-    @Override
-    public Product get(Long id) {
-        /*List<Product> resultados = conexion.createNativeQuery("FROM Product p WHERE p.id = " + id)
-                .getResultList();
-        return resultados.get(0);*/
-        return null;
+
+    public Product findById(Long id) {
+        return conexion.find(Product.class,id);
     }
 
-    @Override
+    public boolean existProduct (String name){
+        Product productExistence=conexion.find(Product.class,name);
+        return (productExistence==null);
+    }
+
+
     public List<Product> getAll() {
         return null;
     }

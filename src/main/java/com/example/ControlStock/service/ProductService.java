@@ -8,27 +8,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 @Service
-public class ProductService implements CRUDinterface{ //Logica de negocio, validaciones
+public class ProductService{ //Logica de negocio, validaciones
 
     @Autowired
     private ProductRepository repository;
-    @Override
-    public void agregar(Object entidad) {
+
+    public void agregar(Product producto) {
+        if (repository.existProduct(producto.getNombre())){
+            //ERROR YA EXISTE UN PRODCUTO CON ESE NOMBRE
+        }
 
     }
 
-    @Override
     public void modificar(Object entidad) {
+        //if(repository)
 
     }
 
-    @Override
+
     public void eliminar(Object id) {
 
     }
 
-    @Override
-    public Product get(Object id) {
+
+    public Product findById(Object id) {
         return null;
     }
 
