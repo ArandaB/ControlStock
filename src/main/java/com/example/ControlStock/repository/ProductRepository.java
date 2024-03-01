@@ -36,7 +36,7 @@ public class ProductRepository {  //Consultad a la BDD
 
     public boolean existProduct (String name){
         Product productExistence=conexion.find(Product.class,name);
-        return (productExistence==null);
+        return (productExistence!=null);
     }
 
 
